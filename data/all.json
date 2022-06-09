@@ -366,5 +366,85 @@
     {
         "slug": "two-tunnel-3d",
         "title": "Two Tunnel 3d"
+    },
+    {
+        "slug": "stickman-fighter-epic-battle",
+        "title": "Stickman Fighter"
+    },
+    {
+        "slug": "stickman-fighter-epic-battle-2",
+        "title": "Stickman Fighter 2"
+    },
+    {
+        "slug": "zombsroyale",
+        "title": "Zombs Royale"
+    },
+    {
+        "slug": "1v1-lol",
+        "title": "1v1.LOL"
+    },
+    {
+        "slug": "smash-karts",
+        "title": "Smash Karts"
+    },
+    {
+        "slug": "bob-the-robber-4",
+        "title": "Bob The Robber 4"
+    },
+    {
+        "slug": "car-rush",
+        "title": "Car Rush"
+    },
+    {
+        "slug": "color-road",
+        "title": "Color Road"
+    },
+    {
+        "slug": "guess-the-kitty",
+        "title": "Guess the kitty"
+    },
+    {
+        "slug": "jewel-shuffle",
+        "title": "Jewel"
+    },
+    {
+        "slug": "moto-x3m",
+        "title": "Moto x3m"
+    },
+    {
+        "slug": "moto-x3m-4-winter",
+        "title": "Moto x3m Winter"
+    },
+    {
+        "slug": "moto-x3m-5-pool-party",
+        "title": "Moto x3m Pool Party"
+    },
+    {
+        "slug": "moto-x3m-spooky-land",
+        "title": "Moto x3m Spooky Land"
+    },
+    {
+        "slug": "mr-bullet",
+        "title": "Mr Bullet"
+    },
+    {
+        "slug": "rainbow-stacker",
+        "title": "Stack"
+    },
+    {
+        "slug": "rolly-vortex",
+        "title": "Rolly Vortex"
+    },
+    {
+        "slug": "stackbounce",
+        "title": "Stack Bounce"
+    },
+    {
+        "slug": "the-impossible-quiz",
+        "title": "The impossible quiz"
+    },
+    {
+        "slug": "the-impossible-quiz-2",
+        "title": "The impossible quiz 2"
     }
 ]

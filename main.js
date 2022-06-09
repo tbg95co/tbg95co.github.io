@@ -23,7 +23,7 @@ function showList(file){
             html += htmlItem;
         });
         const e = document.createElement('div');
-        e.className  = "grid is-4-tablet is-4-desktop is-6-widescreen is-8-fullhd is-8-ultrawide";
+        e.className  = "grid is-4-tablet is-4-desktop is-6-widescreen is-6-fullhd is-7-ultrawide";
         e.innerHTML = html;  
         document.getElementById('listgame').appendChild(e);
     })
