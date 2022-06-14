@@ -41,9 +41,33 @@ function addMenu(){
         </div>`;  
         document.getElementsByClassName('navbar-start')[0].appendChild(e);
 }
+
+var firebase;
+ 
 window.addEventListener('load', function() {
+    
+    // loadFirebase();
     addMenu();
+    // addLoginBtn();
+    checkStore();
 })
+function loadFirebase(){
+    var  r = document.createElement("script");
+	r.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
+        var  database = document.createElement("script");
+        database.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"), database.setAttribute("type", "text/javascript"), database.setAttribute("crossOrigin", "anonymous"),  database.onload = function (){
+            var  authsc = document.createElement("script");
+            authsc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"), authsc.setAttribute("type", "text/javascript"), authsc.setAttribute("crossOrigin", "anonymous"),  authsc.onload = function (){    
+                var firestoresc =  document.createElement("script");
+                firestoresc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"), firestoresc.setAttribute("type", "text/javascript"), firestoresc.setAttribute("crossOrigin", "anonymous"),  firestoresc.onload = function (){    
+                    var  loginsc = document.createElement("script");
+                    loginsc.setAttribute("src", "/mainsite/login.js"), loginsc.setAttribute("type", "text/javascript"), document.head.appendChild(loginsc);
+                },document.head.appendChild(firestoresc);
+                
+            }, document.head.appendChild(authsc);
+        },document.head.appendChild(database);
+    },document.head.appendChild(r);
+}
 function showMenu(){
     const e = document.getElementById('navbar');
     const menumb = document.getElementsByClassName('navbar-menu')[0];
@@ -56,5 +80,31 @@ function showMenu(){
         menumb.style.display = "none";
     }
 }
+
+//
+function checkStore(){
+    var title = localStorage.getItem('title');
+    if(title){
+        document.title = title;
+    }
+    var icon = localStorage.getItem('icon');
+    if(icon){
+
+        setIcoLink(icon);
+    }
+    
+}
+function setIcoLink(linkIcon){
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = linkIcon;
+}
+//
 var btn = document.getElementsByClassName("navbar-burger")[0];
 btn.addEventListener("click", showMenu);
+
+

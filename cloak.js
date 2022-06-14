@@ -1,4 +1,3 @@
-
 function addCss(){
     const e = document.createElement('style');
     e.innerHTML = `
@@ -122,6 +121,7 @@ function addCss(){
         transform: scale(1.2);
         background-color: #ed1c24
     }
+    #claimBtn{right:0;border-radius: 290486px 0 0 290486px;left:auto}
     `;  
     document.getElementsByTagName('head')[0].appendChild(e);
 }
@@ -134,15 +134,47 @@ function addBtnHome(){
     <img src="https://tbg95.github.io/icon36.png" width="36" height="36" alt="Logo">`;
     document.getElementsByTagName('body')[0].appendChild(e);
 }
+function addHourGlass(){
+   
+    var glass = document.createElement('button');
+    glass.id = "claimBtn";
+    glass.className = "in-game-button";
+    glass.innerHTML = `<div id="hourglass" class="fa-stack fa-4x" style="display:none"> <img src="https://tbg95.github.io/sample.gif">
+</div><div id="gift" class="fa-stack fa-4x" > <img src="https://tbg95.github.io/gift.gif">
+</div>`;
+    document.getElementsByTagName('body')[0].appendChild(glass);
+    // document.getElementById("gift").style.display = none;
+}
+function loadFirebase(){
+    var  r = document.createElement("script");
+	r.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
+        var  database = document.createElement("script");
+        database.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"), database.setAttribute("type", "text/javascript"), database.setAttribute("crossOrigin", "anonymous"),  database.onload = function (){
+            var  authsc = document.createElement("script");
+            authsc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"), authsc.setAttribute("type", "text/javascript"), authsc.setAttribute("crossOrigin", "anonymous"),  authsc.onload = function (){    
+                var firestoresc =  document.createElement("script");
+                firestoresc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"), firestoresc.setAttribute("type", "text/javascript"), firestoresc.setAttribute("crossOrigin", "anonymous"),  firestoresc.onload = function (){    
+                    var  loginsc = document.createElement("script");
+                    loginsc.setAttribute("src", "/mainsite/login.js"), loginsc.setAttribute("type", "text/javascript"), document.head.appendChild(loginsc);
+                },document.head.appendChild(firestoresc);
+                
+            }, document.head.appendChild(authsc);
+        },document.head.appendChild(database);
+    },document.head.appendChild(r);
+}
 window.addEventListener('load', function() {
     addCss();
     addBtnHome();
+    addHourGlass();
+    loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
+    
 });
 function returnHome(){
     location.href = "https://tbg95.github.io";
 }
+
 window.alert = function() {};
 
 // or simply
