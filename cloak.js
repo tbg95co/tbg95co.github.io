@@ -166,15 +166,19 @@ window.addEventListener('load', function() {
     addCss();
     addBtnHome();
     addHourGlass();
-    loadFirebase();
+    // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
+    var btn = document.getElementById("claimBtn");
+    btn.addEventListener("click", opendiscord);
     
 });
 function returnHome(){
     location.href = "https://tbg95.github.io";
 }
-
+function opendiscord(){
+    window.open("https://discord.gg/qgHr9T2Vu6");
+}
 window.alert = function() {};
 
 // or simply
