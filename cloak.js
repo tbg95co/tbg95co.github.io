@@ -139,8 +139,7 @@ function addHourGlass(){
     var glass = document.createElement('button');
     glass.id = "claimBtn";
     glass.className = "in-game-button";
-    glass.innerHTML = `<div id="hourglass" class="fa-stack fa-4x" style="display:none"> <img src="https://tbg95.github.io/sample.gif">
-</div><div id="gift" class="fa-stack fa-4x" > <img src="https://tbg95.github.io/gift.gif">
+    glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.github.io/gift.gif">
 </div>`;
     document.getElementsByTagName('body')[0].appendChild(glass);
     // document.getElementById("gift").style.display = none;
