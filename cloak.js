@@ -134,6 +134,16 @@ function addBtnHome(){
     <img src="https://tbg95.github.io/icon36.png" width="36" height="36" alt="Logo">`;
     document.getElementsByTagName('body')[0].appendChild(e);
 }
+function loadGA(){
+    var  r = document.createElement("script");
+	r.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-231937852-1"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-231937852-1');
+    },document.head.appendChild(r);
+}
 function addHourGlass(){
    
     var glass = document.createElement('button');
@@ -165,6 +175,7 @@ window.addEventListener('load', function() {
     addCss();
     addBtnHome();
     addHourGlass();
+    loadGA();
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
