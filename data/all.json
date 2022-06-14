@@ -16,6 +16,11 @@
         "title": "Flip Bottle"
     },
     {
+        "slug": "tiny-fishing",
+        "title": "Tiny Fishing"
+    },
+    
+    {
         "slug": "moto-x3m",
         "title": "Moto x3m"
     },
@@ -67,7 +72,14 @@
         "slug": "doodle-jump",
         "title": "Doodle Jump"
     },
-    
+    {
+        "slug": "tunnel-rush",
+        "title": "Tunnel Rush"
+    },
+    {
+        "slug": "tunnel-rush-2",
+        "title": "Tunnel Rush 2"
+    },
     {
         "slug": "ducklife-4",
         "title": "Duck Life 4"
@@ -372,18 +384,7 @@
         "slug": "the-spear-stickman",
         "title": "The Spear Stickman"
     },
-    {
-        "slug": "tiny-fishing",
-        "title": "Tiny Fishing"
-    },
-    {
-        "slug": "tunnel-rush",
-        "title": "Tunnel Rush"
-    },
-    {
-        "slug": "tunnel-rush-2",
-        "title": "Tunnel Rush 2"
-    },
+    
     {
         "slug": "two-ball-3d",
         "title": "Two Ball 3d"
