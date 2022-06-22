@@ -174,13 +174,13 @@ function loadFirebase(){
 window.addEventListener('load', function() {
     addCss();
     addBtnHome();
-    addHourGlass();
+    // addHourGlass();
     loadGA();
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
-    var btn = document.getElementById("claimBtn");
-    btn.addEventListener("click", opendiscord);
+    // var btn = document.getElementById("claimBtn");
+    // btn.addEventListener("click", opendiscord);
     
 });
 function returnHome(){
