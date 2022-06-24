@@ -4,6 +4,10 @@
         "title": "Slope"
     },
     {
+        "slug": "iron-snout",
+        "title": "Iron Snout"
+    },
+    {
         "slug": "angry-gran-run",
         "title": "Angry gran run"
     },
@@ -304,10 +308,7 @@
         "slug": "idle-mining-empire",
         "title": "Idle Mining Empire"
     },
-    {
-        "slug": "iron-snout",
-        "title": "Iron Snout"
-    },
+    
     {
         "slug": "mad-gunz",
         "title": "Mad Gunz"
