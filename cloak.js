@@ -211,7 +211,7 @@ function dragElement(elmnt) {
     } else {
         elmnt.onmousedown = dragMouseDown;
         
-    }
+    
     
 }
 
@@ -244,7 +244,7 @@ function closeDragElement() {
     hold = true;
     setTimeout(function (){ hold = false}, 300);
 }
-
+}
 function returnHome(){
     location.href = "https://tbg95.github.io";
 }
