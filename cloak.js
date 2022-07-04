@@ -179,7 +179,7 @@ window.addEventListener('load', function() {
     addCss();
     addBtnHome();
     addHourGlass();
-    loadGA();
+    // loadGA();
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
@@ -190,9 +190,11 @@ window.addEventListener('load', function() {
     
 });
 var hold = false;
+var click = 0;
 function openInfo(){
     var  e = document.getElementById("post");
-    if(hold == true){
+    console.log(window.hold);
+    if(window.hold == true){
         return;
     }
     if(!e.classList.contains("open")){
@@ -201,7 +203,7 @@ function openInfo(){
     } else {
         e.classList.remove('open');
     }
-    hold= false;
+    window.hold = false;
 
 }
 function dragElement(elmnt) {
@@ -232,7 +234,7 @@ function elementDrag(e) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-
+    window.click = 1;
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
 
 }
@@ -241,11 +243,19 @@ function closeDragElement() {
 
     document.onmouseup = null;
     document.onmousemove = null;
-    hold = true;
-    setTimeout(function (){ hold = false}, 300);
+    //window.hold = true;
+    if(window.click == 1){
+        window.hold = true;
+        window.click = 0;
+    }
+    setTimeout(function (){ window.hold = false}, 300);
+    console.log(window.hold);
 }
 }
 function returnHome(){
+    if(window.hold == true){
+        return;
+    }
     location.href = "https://tbg95.github.io";
 }
 function opendiscord(){
