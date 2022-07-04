@@ -179,7 +179,7 @@ window.addEventListener('load', function() {
     addCss();
     addBtnHome();
     addHourGlass();
-    // loadGA();
+    loadGA();
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
