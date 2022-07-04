@@ -152,7 +152,7 @@ function addHourGlass(){
     var glass = document.createElement('button');
     glass.id = "claimBtn";
     glass.className = "in-game-button";
-    glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.github.io/gift.gif">
+    glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.github.io/info.png">
 </div>`;
     document.getElementsByTagName('body')[0].appendChild(glass);
     // document.getElementById("gift").style.display = none;
@@ -182,11 +182,22 @@ window.addEventListener('load', function() {
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
+    dragElement(document.getElementById("inGame"));
     dragElement(document.getElementById("claimBtn"));
-    // var btn = document.getElementById("claimBtn");
-    // btn.addEventListener("click", opendiscord);
+    var btn = document.getElementById("claimBtn");
+    btn.addEventListener("click", openInfo);
     
 });
+function openInfo(){
+    var  e = document.getElementById("post");
+    if(!e.classList.contains("open")){
+        console.log(1);
+        e.classList.add('open');
+    } else {
+        e.classList.remove('open');
+    }
+
+}
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id)) {
