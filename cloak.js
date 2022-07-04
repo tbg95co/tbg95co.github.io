@@ -189,14 +189,19 @@ window.addEventListener('load', function() {
     // btn.addEventListener("click", openInfo);
     
 });
+var hold = false;
 function openInfo(){
     var  e = document.getElementById("post");
+    if(hold == true){
+        return;
+    }
     if(!e.classList.contains("open")){
         console.log(1);
         e.classList.add('open');
     } else {
         e.classList.remove('open');
     }
+    hold= false;
 
 }
 function dragElement(elmnt) {
@@ -205,6 +210,9 @@ function dragElement(elmnt) {
         document.getElementById(elmnt.id).onmousedown = dragMouseDown;
     } else {
         elmnt.onmousedown = dragMouseDown;
+        
+    }
+    
 }
 
 function dragMouseDown(e) {
@@ -233,8 +241,10 @@ function closeDragElement() {
 
     document.onmouseup = null;
     document.onmousemove = null;
+    hold = true;
+    setTimeout(function (){ hold = false}, 300);
 }
-}
+
 function returnHome(){
     location.href = "https://tbg95.github.io";
 }
