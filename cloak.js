@@ -152,7 +152,7 @@ function addHourGlass(){
     var glass = document.createElement('button');
     glass.id = "claimBtn";
     glass.className = "in-game-button";
-    glass.onclick = openInfo();
+    // glass.onclick = openInfo();
     glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.github.io/info.png">
 </div>`;
     document.getElementsByTagName('body')[0].appendChild(glass);
@@ -185,8 +185,8 @@ window.addEventListener('load', function() {
     btn.addEventListener("click", returnHome);
     dragElement(document.getElementById("inGame"));
     dragElement(document.getElementById("claimBtn"));
-    // var btn = document.getElementById("claimBtn");
-    // btn.addEventListener("click", openInfo);
+    var btn = document.getElementById("claimBtn");
+    btn.addEventListener("click", openInfo);
     
 });
 var hold = false;
