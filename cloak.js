@@ -121,6 +121,31 @@ function addCss(){
         transform: scale(1.2);
         background-color: #ed1c24
     }
+    .main-nav {
+        z-index: 999;
+        overflow-y: auto;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateX(105%);
+        height: 100%;
+        transition: .3s ease-in-out;
+        background: #f5f5f5;
+        width: 39.5rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding:20px;
+        color:black;
+    }
+    .main-nav.open {
+        transform: translateX(0);
+    }
+    #post{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #3f3424;
+    }
     #claimBtn{right:0;border-radius: 290486px 0 0 290486px;left:auto}
     `;  
     document.getElementsByTagName('head')[0].appendChild(e);
@@ -179,7 +204,7 @@ window.addEventListener('load', function() {
     addCss();
     addBtnHome();
     addHourGlass();
-    loadGA();
+    // loadGA();
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
@@ -248,7 +273,7 @@ function closeDragElement() {
         window.hold = true;
         window.click = 0;
     }
-    setTimeout(function (){ window.hold = false}, 300);
+    setTimeout(function (){ window.hold = false}, 100);
     console.log(window.hold);
 }
 }
