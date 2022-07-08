@@ -91,13 +91,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="navbar-end">
+                        
+                    </div>
                 </div>
             </div>
-            <div class="navbar-filler-right"></div>
+            <div class="navbar-filler-right">
+                
+            </div>
         </nav>
         <div id="category_takeover" style="height: 0px;"></div>
         <section class="section">
-           
+            <div class="container">
+                <div id="search" class="navbar-item search-has-results is-active" data-casual-attached="attached">
+                    <div class="is-arrowless field has-addons" aria-label="Search menu" aria-expanded="false">
+                    <div class="control">
+                        <input class="input navbar-control" id="searchInput" type="search" placeholder="Search Keyword" oninput="liveSearch()" autocomplete="false" aria-labelledby="searchButton">
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
             <div class="container" id="listgame">
                 
                 <h1 class="title">All <span>Games</span></h1>
@@ -136,6 +150,8 @@
             window.addEventListener('load', function() {
                 showList("all.json");
             })
+            
+            
         </script>
     </body>
 </html>

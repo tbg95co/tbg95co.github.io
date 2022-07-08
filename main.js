@@ -31,6 +31,46 @@ function showList(file){
     }
 
 }
+var listGame;
+fetch("data/all.json",{
+headers: {
+    'Content-Type': 'application/json',
+    },
+}).then(response => response.json())
+.then(data => {
+    listGame = data;
+});
+
+function liveSearch(){
+    var x = document.getElementById("searchInput").value;
+    console.log(x);
+    let html = "";
+    for (var j=0; j<listGame.length; j++) {
+        if (listGame[j].title.toUpperCase().indexOf(x.toUpperCase()) >= 0) {
+            var item = listGame[j];
+            const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                <figure class="image is-16by9">
+                    <img
+                        loading="lazy"
+                        src="https://tbg95.github.io/${item.slug}/logo.png"
+                        alt="${item.title}"
+                    />
+                </figure>
+                <div class="content">
+                    <div class="name"><span>${item.title}</span></div>
+                </div>
+            </a>`;
+
+            html += htmlItem;
+        }
+    }
+    // const e = document.createElement('div');
+    // e.className  = "grid is-4-tablet is-4-desktop is-6-widescreen is-6-fullhd is-7-ultrawide";
+    // e.innerHTML = html;  
+    // console.log(document.querySelector('.gird'));
+    document.querySelector('#listgame div').innerHTML = html;
+    // return -1;
+}
 function addMenu(){
     const e = document.createElement('div');
         e.className  = "navbar-item is-mouseable";
@@ -50,7 +90,7 @@ window.addEventListener('load', function() {
     addMenu();
     // addLoginBtn();
     checkStore();
-    loadGA();
+    // loadGA();
 })
 function loadFirebase(){
     var  r = document.createElement("script");
