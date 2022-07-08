@@ -90,7 +90,7 @@ window.addEventListener('load', function() {
     addMenu();
     // addLoginBtn();
     checkStore();
-    // loadGA();
+    loadGA();
 })
 function loadFirebase(){
     var  r = document.createElement("script");
