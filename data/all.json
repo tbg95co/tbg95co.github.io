@@ -4,6 +4,10 @@
         "title": "Slope"
     },
     {
+        "slug": "tunnel-rush",
+        "title": "Tunnel Rush"
+    },
+    {
         "slug": "iron-snout",
         "title": "Iron Snout"
     },
@@ -88,10 +92,7 @@
         "slug": "doodle-jump",
         "title": "Doodle Jump"
     },
-    {
-        "slug": "tunnel-rush",
-        "title": "Tunnel Rush"
-    },
+    
     {
         "slug": "tunnel-rush-2",
         "title": "Tunnel Rush 2"
