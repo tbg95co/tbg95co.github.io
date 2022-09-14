@@ -72,6 +72,14 @@ function liveSearch(){
     // return -1;
 }
 function addMenu(){
+    const newgame = document.createElement('div');
+        newgame.className  = "navbar-item is-mouseable";
+        newgame.innerHTML = `<div class="navbar-link">
+            <a class="button navbar-control" href="/news.html" title="Settings">
+                Settings
+            </a>
+        </div>`;  
+    document.getElementsByClassName('navbar-start')[0].appendChild(newgame);
     const e = document.createElement('div');
         e.className  = "navbar-item is-mouseable";
         e.innerHTML = `<div class="navbar-link">
@@ -79,7 +87,8 @@ function addMenu(){
                 Settings
             </a>
         </div>`;  
-        document.getElementsByClassName('navbar-start')[0].appendChild(e);
+    document.getElementsByClassName('navbar-start')[0].appendChild(e);
+    
 }
 
 var firebase;
