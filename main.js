@@ -83,8 +83,8 @@ function addMenu(){
     const e = document.createElement('div');
         e.className  = "navbar-item is-mouseable";
         e.innerHTML = `<div class="navbar-link">
-            <a class="button navbar-control" href="/settings.html" title="Settings">
-                Settings
+            <a class="button navbar-control" href="/settings.html" title="News">
+            News
             </a>
         </div>`;  
     document.getElementsByClassName('navbar-start')[0].appendChild(e);
