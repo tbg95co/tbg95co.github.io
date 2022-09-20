@@ -75,7 +75,7 @@ function addMenu(){
     const newgame = document.createElement('div');
         newgame.className  = "navbar-item is-mouseable";
         newgame.innerHTML = `<div class="navbar-link">
-            <a class="button navbar-control" href="/news.html" title="Settings">
+            <a class="button navbar-control" href="/settings.html" title="Settings">
                 Settings
             </a>
         </div>`;  
@@ -83,7 +83,7 @@ function addMenu(){
     const e = document.createElement('div');
         e.className  = "navbar-item is-mouseable";
         e.innerHTML = `<div class="navbar-link">
-            <a class="button navbar-control" href="/settings.html" title="News">
+            <a class="button navbar-control" href="/news.html" title="News">
             News
             </a>
         </div>`;  
