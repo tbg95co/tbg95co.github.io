@@ -8,11 +8,11 @@ function showList(file){
         .then(data => {
             let html = "";
             data.forEach((item) =>{
-                const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                             <figure class="image is-16by9">
                                 <img
                                     loading="lazy"
-                                    src="https://tbg95.github.io/${item.slug}/logo.png"
+                                    src="https://tbg95.co/${item.slug}/logo.png"
                                     alt="${item.title}"
                                 />
                             </figure>
@@ -48,11 +48,11 @@ function liveSearch(){
     for (var j=0; j<listGame.length; j++) {
         if (listGame[j].title.toUpperCase().indexOf(x.toUpperCase()) >= 0) {
             var item = listGame[j];
-            const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+            const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                 <figure class="image is-16by9">
                     <img
                         loading="lazy"
-                        src="https://tbg95.github.io/${item.slug}/logo.png"
+                        src="https://tbg95.co/${item.slug}/logo.png"
                         alt="${item.title}"
                     />
                 </figure>
@@ -133,14 +133,14 @@ function showMenu(){
 }
 function loadGA(){
     var  r = document.createElement("script");
-	r.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-231937852-1"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
+	r.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-5YW5LYPX1G"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       
-        gtag('config', 'UA-231937852-1');
-        var ads = document.createElement('script');
-        ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
+        gtag('config', 'G-5YW5LYPX1G');
+        // var ads = document.createElement('script');
+        // ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
     },document.head.appendChild(r);
 }
 //
