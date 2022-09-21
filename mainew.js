@@ -12,7 +12,7 @@ function showList(file){
                 <div class="g-card">
                     <div class="pic">
                     <figure class="ratio ratio-75">
-                        <a href="https://tbg95.co/${item.slug}/">
+                        <a href="https://tbg95.co/${item.slug}/" rel="noindex nofollow">
                         <img src="https://tbg95.co/${item.slug}/logo.png" class="game-thumb" alt="${item.title}">
                         </a>
                     </figure>
@@ -21,7 +21,7 @@ function showList(file){
                     <h3 class="grid-title ellipsis">${item.title}</h3>
         
                     <div class="bt-cta">
-                        <a class="cta" href="https://tbg95.co/${item.slug}/">Play Now</a>
+                        <a class="cta" rel="noindex nofollow" href="https://tbg95.co/${item.slug}/">Play Now</a>
                     </div>
                     </div>
                 </div>
@@ -63,17 +63,17 @@ function showHot(file){
                 const htmlItem = `<div class="g-card">
                     <div class="pic">
                     <figure class="ratio ratio-1">
-                        <a href="https://tbg95.co/${item.slug}/">
+                        <a href="https://tbg95.co/${item.slug}/" rel="noindex nofollow">
                         <img src="https://tbg95.co/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
                         </a>
                     </figure>
                     </div>
                     <div class="g-info">
                     <h3 class="grid-title ellipsis">
-                        <a href="https://tbg95.co/${item.slug}/">${item.title}</a>
+                        <a href="https://tbg95.co/${item.slug}/" rel="noindex nofollow">${item.title}</a>
                     </h3>
         
-                    <a href="https://tbg95.co/${item.slug}/" class="bt-play">
+                    <a href="https://tbg95.co/${item.slug}/" class="bt-play" rel="noindex nofollow">
                         <img src="/images/play.svg" alt="Play game">
                     </a>
                     </div>
@@ -123,17 +123,17 @@ function liveSearch(){
             const htmlItem = `<div class="g-card">
                     <div class="pic">
                     <figure class="ratio ratio-1">
-                        <a href="https://tbg95.co/${item.slug}/">
+                        <a href="https://tbg95.co/${item.slug}/" rel="noindex nofollow">
                         <img src="https://tbg95.co/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
                         </a>
                     </figure>
                     </div>
                     <div class="g-info">
                     <h3 class="grid-title ellipsis">
-                        <a href="https://tbg95.co/${item.slug}/">${item.title}</a>
+                        <a href="https://tbg95.co/${item.slug}/" rel="noindex nofollow">${item.title}</a>
                     </h3>
         
-                    <a href="https://tbg95.co/${item.slug}/" class="bt-play">
+                    <a href="https://tbg95.co/${item.slug}/" class="bt-play" rel="noindex nofollow">
                         <img src="/images/play.svg" alt="Play game">
                     </a>
                     </div>
