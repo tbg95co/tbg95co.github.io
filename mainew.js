@@ -13,7 +13,7 @@ function showList(file){
                     <div class="pic">
                     <figure class="ratio ratio-75">
                         <a href="https://tbg95.co/${item.slug}/">
-                        <img src="https://tbg95.github.io/${item.slug}/logo.png" class="game-thumb" alt="${item.title}">
+                        <img src="https://tbg95.co/${item.slug}/logo.png" class="game-thumb" alt="${item.title}">
                         </a>
                     </figure>
                     </div>
@@ -26,11 +26,11 @@ function showList(file){
                     </div>
                 </div>
                 `;
-                /*const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                /*const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                             <figure class="image is-16by9">
                                 <img
                                     loading="lazy"
-                                    src="https://tbg95.github.io/${item.slug}/logo.png"
+                                    src="https://tbg95.co/${item.slug}/logo.png"
                                     alt="${item.title}"
                                 />
                             </figure>
@@ -64,7 +64,7 @@ function showHot(file){
                     <div class="pic">
                     <figure class="ratio ratio-1">
                         <a href="https://tbg95.co/${item.slug}/">
-                        <img src="https://tbg95.github.io/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
+                        <img src="https://tbg95.co/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
                         </a>
                     </figure>
                     </div>
@@ -78,11 +78,11 @@ function showHot(file){
                     </a>
                     </div>
                 </div>`;
-                /*const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                /*const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                             <figure class="image is-16by9">
                                 <img
                                     loading="lazy"
-                                    src="https://tbg95.github.io/${item.slug}/logo.png"
+                                    src="https://tbg95.co/${item.slug}/logo.png"
                                     alt="${item.title}"
                                 />
                             </figure>
@@ -124,7 +124,7 @@ function liveSearch(){
                     <div class="pic">
                     <figure class="ratio ratio-1">
                         <a href="https://tbg95.co/${item.slug}/">
-                        <img src="https://tbg95.github.io/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
+                        <img src="https://tbg95.co/${item.slug}/logo.png" class="small-thumb" alt="${item.title}">
                         </a>
                     </figure>
                     </div>
