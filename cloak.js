@@ -281,7 +281,7 @@ function returnHome(){
     if(window.hold == true){
         return;
     }
-    location.href = "https://tbg95.co";
+    location.href = "https://tbg95.co/";
 }
 function opendiscord(){
     window.open("https://discord.gg/qgHr9T2Vu6");
