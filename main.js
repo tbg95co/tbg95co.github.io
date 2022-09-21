@@ -8,11 +8,11 @@ function showList(file){
         .then(data => {
             let html = "";
             data.forEach((item) =>{
-                const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                             <figure class="image is-16by9">
                                 <img
                                     loading="lazy"
-                                    src="https://tbg95.co/${item.slug}/logo.png"
+                                    src="https://tbg95.github.io/${item.slug}/logo.png"
                                     alt="${item.title}"
                                 />
                             </figure>
@@ -48,11 +48,11 @@ function liveSearch(){
     for (var j=0; j<listGame.length; j++) {
         if (listGame[j].title.toUpperCase().indexOf(x.toUpperCase()) >= 0) {
             var item = listGame[j];
-            const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+            const htmlItem = `<a href="https://tbg95.github.io/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
                 <figure class="image is-16by9">
                     <img
                         loading="lazy"
-                        src="https://tbg95.co/${item.slug}/logo.png"
+                        src="https://tbg95.github.io/${item.slug}/logo.png"
                         alt="${item.title}"
                     />
                 </figure>
