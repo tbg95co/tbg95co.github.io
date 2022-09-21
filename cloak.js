@@ -167,8 +167,8 @@ function loadGA(){
         gtag('js', new Date());
       
         gtag('config', 'G-5YW5LYPX1G');
-        //var ads = document.createElement('script');
-        //ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
+        var ads = document.createElement('script');
+        ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
     },document.head.appendChild(r);
 }
 
