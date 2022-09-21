@@ -161,14 +161,14 @@ function addBtnHome(){
 }
 function loadGA(){
     var  r = document.createElement("script");
-	r.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-231937852-1"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
+	r.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-5YW5LYPX1G"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       
-        gtag('config', 'UA-231937852-1');
-        var ads = document.createElement('script');
-        ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
+        gtag('config', 'G-5YW5LYPX1G');
+        //var ads = document.createElement('script');
+        //ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
     },document.head.appendChild(r);
 }
 
@@ -178,7 +178,7 @@ function addHourGlass(){
     glass.id = "claimBtn";
     glass.className = "in-game-button";
     // glass.onclick = openInfo();
-    glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.github.io/info.png">
+    glass.innerHTML = `<div id="gift" class="fa-stack fa-4x" style="display:flex"> <img src="https://tbg95.co/info.png">
 </div>`;
     document.getElementsByTagName('body')[0].appendChild(glass);
     // document.getElementById("gift").style.display = none;
@@ -281,7 +281,7 @@ function returnHome(){
     if(window.hold == true){
         return;
     }
-    location.href = "https://tbg95.github.io";
+    location.href = "https://tbg95.co";
 }
 function opendiscord(){
     window.open("https://discord.gg/qgHr9T2Vu6");
