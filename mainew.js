@@ -52,7 +52,7 @@ function showList(file){
 }
 function showHot(file){
     if(document.getElementById('listhot')){
-        fetch("data/"+file,{
+        fetch("/data/"+file,{
             headers: {
                 'Content-Type': 'application/json',
               },

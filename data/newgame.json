@@ -28,18 +28,6 @@
     "title": "Moto x3m"
 },
 {
-    "slug": "moto-x3m-4-winter",
-    "title": "Moto x3m Winter"
-},
-{
-    "slug": "moto-x3m-5-pool-party",
-    "title": "Moto x3m Pool Party"
-},
-{
-    "slug": "moto-x3m-spooky-land",
-    "title": "Moto x3m Spooky Land"
-},
-{
     "slug": "drift-boss",
     "title": "Drift Boss"
 },
@@ -76,7 +64,32 @@
     "title": "Doodle Jump"
 },
 {
-    "slug": "tunnel-rush-2",
-    "title": "Tunnel Rush 2"
+    "slug": "tunnel-rush",
+    "title": "Tunnel Rush"
+},
+{
+    "slug": "fireboy-and-watergirl-1",
+    "title": "Fireboy and watergirl"
+},
+{
+    "slug": "rolly-vortex",
+    "title": "Rolly Vortex"
+},
+    
+{
+    "slug": "bob-the-robber-4",
+    "title": "Bob The Robber 4"
+},
+{
+    "slug": "ovo",
+    "title": "Ovo"
+},
+{
+    "slug": "cookie-clicker",
+    "title": "Cookie Clicker"
+},
+{
+    "slug": "bottle-flip-3d",
+    "title": "Flip Bottle"
 }
 ]
