@@ -12,7 +12,7 @@ function reset(){
     localStorage.removeItem('title');
     localStorage.removeItem('icon');
     setIcoLink('icon.png');
-    document.title = 'TBG95'
+    document.title = 'Setting - TBG95';
 }
 function setIcoLink(linkIcon){
     var link = document.querySelector("link[rel~='icon']");
