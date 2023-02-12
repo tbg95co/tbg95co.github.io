@@ -202,9 +202,11 @@ function loadFirebase(){
 }
 window.addEventListener('load', function() {
     addCss();
+    if(window.location != window.parent.location){
     addBtnHome();
     addHourGlass();
     loadGA();
+   
     // loadFirebase();
     var btn = document.getElementById("inGame");
     btn.addEventListener("click", returnHome);
@@ -212,6 +214,7 @@ window.addEventListener('load', function() {
     dragElement(document.getElementById("claimBtn"));
     var btn = document.getElementById("claimBtn");
     btn.addEventListener("click", openInfo);
+}
     
 });
 var hold = false;
