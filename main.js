@@ -8,7 +8,7 @@ function showList(file){
         .then(data => {
             let html = "";
             data.forEach((item) =>{
-                const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+                const htmlItem = `<a href="https://tbg95.co/g/${item.slug}.html" target="_self" title="${item.title}" class="tile-card">
                             <figure class="image is-16by9">
                                 <img
                                     loading="lazy"
@@ -48,7 +48,7 @@ function liveSearch(){
     for (var j=0; j<listGame.length; j++) {
         if (listGame[j].title.toUpperCase().indexOf(x.toUpperCase()) >= 0) {
             var item = listGame[j];
-            const htmlItem = `<a href="https://tbg95.co/${item.slug}/" target="_self" title="${item.title}" class="tile-card">
+            const htmlItem = `<a href="https://tbg95.co/g/${item.slug}.html" target="_self" title="${item.title}" class="tile-card">
                 <figure class="image is-16by9">
                     <img
                         loading="lazy"
@@ -94,30 +94,13 @@ function addMenu(){
 var firebase;
  
 window.addEventListener('load', function() {
-    
-    // loadFirebase();
+
     addMenu();
     // addLoginBtn();
     checkStore();
     loadGA();
 })
-function loadFirebase(){
-    var  r = document.createElement("script");
-	r.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"),  r.onload = function (){
-        var  database = document.createElement("script");
-        database.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"), database.setAttribute("type", "text/javascript"), database.setAttribute("crossOrigin", "anonymous"),  database.onload = function (){
-            var  authsc = document.createElement("script");
-            authsc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"), authsc.setAttribute("type", "text/javascript"), authsc.setAttribute("crossOrigin", "anonymous"),  authsc.onload = function (){    
-                var firestoresc =  document.createElement("script");
-                firestoresc.setAttribute("src", "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"), firestoresc.setAttribute("type", "text/javascript"), firestoresc.setAttribute("crossOrigin", "anonymous"),  firestoresc.onload = function (){    
-                    var  loginsc = document.createElement("script");
-                    loginsc.setAttribute("src", "/mainsite/login.js"), loginsc.setAttribute("type", "text/javascript"), document.head.appendChild(loginsc);
-                },document.head.appendChild(firestoresc);
-                
-            }, document.head.appendChild(authsc);
-        },document.head.appendChild(database);
-    },document.head.appendChild(r);
-}
+
 function showMenu(){
     
     const e = document.getElementById('navbar');
@@ -139,8 +122,8 @@ function loadGA(){
         gtag('js', new Date());
       
         gtag('config', 'G-5YW5LYPX1G');
-        // var ads = document.createElement('script');
-        // ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
+        var ads = document.createElement('script');
+        ads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889675448259925"), ads.setAttribute("type", "text/javascript"), ads.setAttribute("crossOrigin", "anonymous"), document.head.appendChild(ads);
     },document.head.appendChild(r);
 }
 //

@@ -2,6 +2,7 @@
 
 (function($){
 	$(window).on("load",function(){
+		addMenuT();
 		$(".content").mCustomScrollbar();
 	});
 })(jQuery);
@@ -50,17 +51,7 @@ $(document).ready(function(){
 		$(this).addClass('disabled');
 		// fetch_games(load_amount, 'new');
 	});
-	function fetch_games(amount, sort_by) {
-		$.ajax({
-			url: "/includes/fetch.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {amount: amount, offset: last_offset, sort_by: sort_by},
-			complete: function (data) {
-				append_content(JSON.parse(data.responseText));
-			}
-		});
-	}
+
 	function append_content(data){
 		last_offset += data.length;
 		data.forEach((game)=>{
@@ -100,48 +91,7 @@ $(document).ready(function(){
 	$("#navb").on('hidden.bs.collapse', function(){
 		$('.user-avatar').show();
 	});
-	$('.bt-group #upvote').on('click', function(e) {
-		e.preventDefault();
-		$(this).addClass('disabled');
-		let data_id = $(this).attr('data-id');
-		$.ajax({
-			url: '/includes/vote.php',
-			type: 'POST',
-			dataType: 'json',
-			data: {'vote': true, 'action': 'upvote', 'id': data_id},
-			success: function (data) {
-				//console.log(data.responseText);
-			},
-			error: function (data) {
-				//console.log(data.responseText);
-			},
-			complete: function (data) {
-				console.log(data.responseText);
-				$('.bt-group #upvote').addClass('has-background-success');
-			}
-		});
-	});
-	$('.bt-group #downvote').on('click', function(e) {
-		e.preventDefault();
-		$(this).addClass('disabled');
-		let data_id = $(this).attr('data-id');
-		$.ajax({
-			url: '/includes/vote.php',
-			type: 'POST',
-			dataType: 'json',
-			data: {'vote': true, 'action': 'downvote', 'id': data_id},
-			success: function (data) {
-				//console.log(data.responseText);
-			},
-			error: function (data) {
-				//console.log(data.responseText);
-			},
-			complete: function (data) {
-				console.log(data.responseText);
-				$('.bt-group #downvote').addClass('has-background-danger');
-			}
-		});
-	});
+	
 	$('.user-avatar').on('click', ()=>{
 		let element = $('.user-links');
 		if (element.is(":hidden")) {
@@ -159,103 +109,16 @@ $(document).ready(function(){
 			scrollLeft: '+=150'
 		}, 300, 'swing');
 	});
-	// $('.delete-comment').on('click', function() {
-	// 	let id = $(this).attr('data-id');
-	// 	$.ajax({
-	// 		url: '/includes/comment.php',
-	// 		type: 'POST',
-	// 		dataType: 'json',
-	// 		data: {'delete': true, 'id': id},
-	// 		success: function (data) {
-	// 			//console.log(data.responseText);
-	// 		},
-	// 		error: function (data) {
-	// 			//console.log(data.responseText);
-	// 		},
-	// 		complete: function (data) {
-	// 			if(data.responseText === 'deleted'){
-	// 				$('.id-'+id).remove();
-	// 			}
-	// 		}
-	// 	}, this);
-	// });
-	// let game_id;
-	// if($('#comments').length){
-	// 	game_id = $('.bt-group #upvote').attr('data-id');
-	// 	$.ajax({
-	// 		url: '/includes/comment.php',
-	// 		type: 'POST',
-	// 		dataType: 'json',
-	// 		data: {'load': true, 'game_id': game_id},
-	// 		success: function (data) {
-	// 			//console.log(data.responseText);
-	// 		},
-	// 		error: function (data) {
-	// 			//console.log(data.responseText);
-	// 		},
-	// 		complete: function (data) {
-	// 			let comments = JSON.parse(data.responseText);
-	// 			load_comments(convert_comments(comments));
-	// 		}
-	// 	});
-	// }
-	function convert_comments(array){
-		let data = [];
-		array.forEach((item)=>{
-			let arr = {
-				id: Number(item.id),
-				created: item.created_date,
-				content: item.comment,
-				fullname: item.sender_username,
-				profile_picture_url: item.avatar,
-			};
-			if(Number(item.parent_id)){
-				arr.parent = Number(item.parent_id);
-			}
-			if(!arr.fullname){
-				arr.fullname = 'Anonymous';
-			}
-			data.push(arr);
-		});
-		return data;
-	}
-	function load_comments(array){
-		let read_only = false;
-		let avatar = $('.user-avatar img').attr('src');
-		if(!avatar){
-			avatar = '/images/default_profile.png';
-			read_only = true;
-		}
-		$('#comments').comments({
-			enableUpvoting:false,
-			roundProfilePictures: true,
-			popularText: '',
-			profilePictureURL: avatar,
-			readOnly: read_only,
-			enableNavigation: false,
-			enableEditing: false,
-			getComments: function(success, error) {
-				success(array);
-			},
-			postComment: function(commentJSON, success, error) {
-				commentJSON.source = 'jquery-comments';
-				commentJSON.send = true;
-				commentJSON.game_id = game_id;
-				$.ajax({
-					type: 'post',
-					url: '/includes/comment.php',
-					data: commentJSON,
-					success: function(comment) {
-						console.log(comment);
-						success(commentJSON)
-					},
-					error: error
-				});
-			}
-		});
-	}
+	
 });
-
+function addMenuT(){
+	var html = `<li class="nav-item ">
+	<a class="nav-link" href="/collection/apps.html">Apps</a>
+	</li><li class="nav-item ">
+	<a class="nav-link" href="/collection/unblocked-games-77.html">Unblocked Games 77</a>
+  </li>`;
+	document.querySelector(".main-menu ").innerHTML = html;
+  }
 function open_fullscreen() {
 	let game = document.getElementById("game-area");
 	if (game.requestFullscreen) {
@@ -268,46 +131,3 @@ function open_fullscreen() {
 	  game.msRequestFullscreen();
 	}
 };
-if($('iframe#game-area').length){
-	load_leaderboard({type: 'top', amount: 10});
-}
-
-function load_leaderboard(conf){
-	// if($('#content-leaderboard').length){
-	// 	let cur_url = $("iframe.game-iframe").attr('src');
-	// 	let ref;
-	// 	if(cur_url[cur_url.length-1] === '/'){
-	// 		ref = cur_url.substring(
-	// 		    cur_url.indexOf("/games/") + 7, 
-	// 		    cur_url.length-1
-	// 		);
-	// 	} else if(cur_url.substr(cur_url.length-5, cur_url.length) === '.html') {
-	// 		ref = cur_url.substring(
-	// 		    cur_url.indexOf("/games/") + 7, 
-	// 		    cur_url.lastIndexOf("/index.html")
-	// 		);
-	// 	}
-	// 	let params = 'action=get_scoreboard&ref='+ref+'&conf='+JSON.stringify(conf);
-	// 	let xhr = new XMLHttpRequest();
-	// 	xhr.open('POST', '/includes/api.php', true);
-	// 	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	// 	xhr.onload = function() {
-	// 		if (xhr.status === 200) {
-	// 			if(xhr.responseText){
-	// 				show_leaderboard(JSON.parse(xhr.responseText));
-	// 			}
-	// 		}
-	// 	}.bind(this);
-	// 	xhr.send(params);
-	// }
-}
-function show_leaderboard(data){
-	let html = '<table class="scoreboard table"><thead><tr><th scope="col">#</th><th scope="col">Username</th><th scope="col">Score</th><th scope="col">Date</th></tr></thead><tbody>';
-	let index = 1;
-	data.forEach((item)=>{
-		html += '<tr><th scope="row">'+index+'</th><td>'+item.username+'</td><td>'+item.score+'</td><td>'+item.created_date.substr(0, 10)+'</td></tr>';
-		index++;
-	});
-	html += '</tbody></table>';
-	$('#content-leaderboard').html(html);
-}

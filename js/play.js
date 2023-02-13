@@ -2,6 +2,10 @@ function playGame(){
     var tmp = document.querySelector('#game-arena').dataset.url;
     document.querySelector('#game-arena').innerHTML = `<iframe id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write" name="gameFrame" scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="${tmp}"></iframe>`;
 }
+function playApp(){
+  var tmp = document.querySelector('#game-arena').dataset.url;
+  document.querySelector('#game-arena').innerHTML = `<iframe id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write" name="gameFrame" scrolling="yes" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="${tmp}"></iframe>`;
+}
 function open_fullscreen() {
 	let game = document.getElementById("game-element");
 	if (game.requestFullscreen) {
@@ -29,8 +33,15 @@ function loadGA(){
         },document.head.appendChild(ads);
     },document.head.appendChild(r);
 }
-
+function addMenu(){
+  var html = `<li class="nav-item ">
+  <a class="nav-link" href="/collection/apps.html">Apps</a>
+  </li><li class="nav-item ">
+  <a class="nav-link" href="/collection/unblocked-games-77.html">Unblocked Games 77</a>
+</li>`;
+  document.querySelector(".main-menu ").innerHTML = html;
+}
 window.addEventListener('load', function() {
-
-    // loadGA();
+  addMenu();
+  loadGA();
 });
