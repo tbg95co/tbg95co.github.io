@@ -202,20 +202,22 @@ function loadFirebase(){
 }
 window.addEventListener('load', function() {
     addCss();
-    if(window.location != window.parent.location){
-    addBtnHome();
-    addHourGlass();
-    loadGA();
-   
-    // loadFirebase();
-    var btn = document.getElementById("inGame");
-    btn.addEventListener("click", returnHome);
-    dragElement(document.getElementById("inGame"));
-    dragElement(document.getElementById("claimBtn"));
-    var btn = document.getElementById("claimBtn");
-    btn.addEventListener("click", openInfo);
-}
+    console.log("--fx--",window.parent.location);
+    if(window.parent.location){
+        if(window.location != window.parent.location){
+        addBtnHome();
+        addHourGlass();
+        loadGA();
     
+        // loadFirebase();
+        var btn = document.getElementById("inGame");
+        btn.addEventListener("click", returnHome);
+        dragElement(document.getElementById("inGame"));
+        dragElement(document.getElementById("claimBtn"));
+        var btn = document.getElementById("claimBtn");
+        btn.addEventListener("click", openInfo);
+        }
+    }    
 });
 var hold = false;
 var click = 0;
