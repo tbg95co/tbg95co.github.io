@@ -203,8 +203,15 @@ function loadFirebase(){
 window.addEventListener('load', function() {
     addCss();
     console.log("--fx--",window.parent.location);
-    if(window.parent.location){
-        if(window.location != window.parent.location){
+    var check = false;
+    if(window.parent.location == "tbg95.co" && window.parent.href.indexOf("index.html") == -1 && window.parent.href.indexOf(".html") == -1){
+        check = true;
+    }
+    if(window.location != window.parent.location){
+        check = true;
+    }
+  
+    if(check == true){
         addBtnHome();
         addHourGlass();
         loadGA();
@@ -216,8 +223,8 @@ window.addEventListener('load', function() {
         dragElement(document.getElementById("claimBtn"));
         var btn = document.getElementById("claimBtn");
         btn.addEventListener("click", openInfo);
-        }
-    }    
+    }
+    
 });
 var hold = false;
 var click = 0;
