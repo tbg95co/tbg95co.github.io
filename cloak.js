@@ -204,7 +204,7 @@ window.addEventListener('load', function() {
     addCss();
     console.log("--fx--",window.parent.location);
     var check = false;
-    if(window.parent.location == "tbg95.co" && window.parent.href.indexOf("index.html") == -1 && window.parent.href.indexOf(".html") == -1){
+    if(window.parent.location.host == "tbg95.co" && window.parent.location.href.indexOf("index.html") == -1 && window.parent.location.href.indexOf(".html") == -1){
         check = true;
     }
     if(window.location != window.parent.location){
