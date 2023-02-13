@@ -215,6 +215,7 @@ window.addEventListener('load', function() {
 
   
     if(check == true){
+        addHourGlass();
         /*
         addBtnHome();
         addHourGlass();
