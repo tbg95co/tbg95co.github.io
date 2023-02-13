@@ -204,12 +204,15 @@ window.addEventListener('load', function() {
     addCss();
     console.log("--fx--",window.parent.location);
     var check = false;
-    if(window.parent.location.host == "tbg95.co" && window.parent.location.href.indexOf("index.html") == -1 && window.parent.location.href.indexOf(".html") == -1){
-        check = true;
+    if(window.parent.location){
+        if(window.parent.location.host == "tbg95.co" && window.parent.location.href.indexOf("index.html") == -1 && window.parent.location.href.indexOf(".html") == -1){
+            check = true;
+        }
     }
     if(window.location != window.parent.location){
         check = true;
     }
+
   
     if(check == true){
         addBtnHome();
