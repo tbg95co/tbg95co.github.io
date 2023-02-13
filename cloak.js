@@ -215,6 +215,7 @@ window.addEventListener('load', function() {
 
   
     if(check == true){
+        /*
         addBtnHome();
         addHourGlass();
         loadGA();
@@ -226,6 +227,7 @@ window.addEventListener('load', function() {
         dragElement(document.getElementById("claimBtn"));
         var btn = document.getElementById("claimBtn");
         btn.addEventListener("click", openInfo);
+        */
     }
     
 });
