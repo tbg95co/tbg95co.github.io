@@ -42,7 +42,7 @@ function showHot(file){
         const htmlNew  = '<div class="g-card"><div class="pic"><figure class="ratio ratio-1"><a href="https://basketballstars-2026.github.io/"><img src="https://basketballstars-2026.github.io/assets/images/logo-pvp-sz.webp" class="small-thumb" alt="Basketball Stars New" loading="lazy"></a></figure></div><div class="g-info"><h3 class="grid-title ellipsis"><a href="https://basketballstars-2026.github.io/">Basketball Stars New</a></h3><a href="https://basketballstars-2026.github.io/" class="bt-play" aria-label="Play Basketball Stars New"><img src="/images/play.svg" alt=""></a></div></div>';
         const htmlDivTmp = document.createElement('div');
         htmlDivTmp.className  = "column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile show";
-        htmlDivTmp.innerHTML = htmlItem;  
+        htmlDivTmp.innerHTML = htmlNew;  
         document.getElementById('listhot').appendChild(htmlDivTmp);
         fetch("/data/"+file,{
             headers: {
