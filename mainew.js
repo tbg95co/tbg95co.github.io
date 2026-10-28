@@ -43,7 +43,12 @@ function showHot(file){
         const htmlDivTmp = document.createElement('div');
         htmlDivTmp.className  = "column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile show";
         htmlDivTmp.innerHTML = htmlNew;  
+        const motoX3m = '<div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile show"><div class="g-card"><div class="pic"><figure class="ratio ratio-1"><a href="https://motox3m2026.github.io/"><img src="https://motox3m2026.github.io/images-optimized/w1920-q45/media/branding/moto-x3m-2026-horizontal.png.avif" class="small-thumb" alt="Moto X3M 2026" width="900" height="300" loading="lazy" decoding="async" style="object-fit:contain"></a></figure></div><div class="g-info"><h3 class="grid-title ellipsis"><a href="https://motox3m2026.github.io/">Moto X3M 2026</a></h3><a href="https://motox3m2026.github.io/" class="bt-play" aria-label="Play Moto X3M 2026"><img src="/images/play.svg" alt="" aria-hidden="true"></a></div></div></div>';
+        const motoX3mDiv = document.createElement('div');
+        motoX3mDiv.className  = "column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile show";
+        motoX3mDiv.innerHTML = motoX3m;  
         document.getElementById('listhot').appendChild(htmlDivTmp);
+        document.getElementById('listhot').appendChild(motoX3mDiv);
         fetch("/data/"+file,{
             headers: {
                 'Content-Type': 'application/json',
